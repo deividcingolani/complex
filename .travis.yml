@@ -27,7 +27,7 @@ after_success:
     env: "MultiDocker-env"
     bucket_name: "elasticbeanstalk-us-west-2-768993639995"
     bucket_path: "multidocker"
-    on:
+    on: 
       branch: master
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
