@@ -21,6 +21,7 @@ after_success:
   - docker push davidcingolani/multi-worker
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "us-west-2"
   app: "multidocker"
