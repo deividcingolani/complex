@@ -1,9 +1,12 @@
 version: "3.7"
 services:
+
   postgres:
     image: "postgres:latest"
+
   redis:
     image: "redis:latest"
+
   nginx:
     restart: always
     depends_on: 
@@ -14,6 +17,7 @@ services:
       context: ./nginx
     ports:
       - "3050:80"
+
   api:
     depends_on:
       - postgres
@@ -31,6 +35,7 @@ services:
       - PGDATABASE=postgres
       - PGPASSWORD=postgres_password
       - PGPORT=5432
+      
   client:
     build:
       dockerfile: Dockerfile.dev
